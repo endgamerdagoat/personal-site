@@ -11,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&display=swap"
             rel="stylesheet"
         />
 
@@ -30,195 +30,374 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <!-- Animated background grid -->
+        <div class="bg-grid"></div>
+        <div class="bg-glow"></div>
+
         <nav class="navbar">
-            <div class="nav-logo"><a href="#home">Raghuram Duvvuri</a></div>
+            <div class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <a href="#home">RD</a>
+                <span class="logo-bracket">]</span>
+            </div>
             <ul class="nav-links">
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#learning">Learning</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li>
+                    <a href="#skills"><span class="nav-num">01.</span>Skills</a>
+                </li>
+                <li>
+                    <a href="#learning"
+                        ><span class="nav-num">02.</span>Learning</a
+                    >
+                </li>
+                <li>
+                    <a href="#projects"
+                        ><span class="nav-num">03.</span>Projects</a
+                    >
+                </li>
             </ul>
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-sun"></i>
+            <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                <span class="toggle-track">
+                    <span class="toggle-thumb"></span>
+                </span>
             </button>
         </nav>
 
-        <div id="particles-js"></div>
-
         <!-- HERO -->
-        <section class="hero" id="home" data-animate>
-            <div class="hero-text">
-                <h1>Hi, I'm <span>Raghuram</span></h1>
-                <p>
-                    A high school student passionate about software development,
-                    mathematics, physics, and engineering.
-                </p>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-tag">
+                        <span class="tag-dot"></span>
+                        Available for opportunities
+                    </div>
+                    <h1>
+                        Hi, I'm<br /><span class="name-accent">Raghuram</span>
+                    </h1>
+                    <p class="hero-sub">
+                        High school student passionate about software
+                        development, mathematics, physics, and engineering.
+                    </p>
+                    <div class="hero-links">
+                        <a
+                            href="https://github.com/raghuram-duvvuri"
+                            target="_blank"
+                            class="btn btn-primary"
+                        >
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a
+                            href="https://linkedin.com/in/raghuram-duvvuri"
+                            target="_blank"
+                            class="btn btn-outline"
+                        >
+                            <i class="fab fa-linkedin-in"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
 
-                <div class="hero-links">
-                    <a
-                        href="https://github.com/raghuram-duvvuri"
-                        target="_blank"
-                        class="btn"
-                    >
-                        GitHub
-                    </a>
-                    <a
-                        href="https://linkedin.com/in/raghuram-duvvuri"
-                        target="_blank"
-                        class="btn"
-                    >
-                        LinkedIn
-                    </a>
+                <div class="hero-image-wrap">
+                    <div class="image-ring ring-1"></div>
+                    <div class="image-ring ring-2"></div>
+                    <div class="hero-image">
+                        <img src="images/photo.png" alt="Raghuram Duvvuri" />
+                    </div>
+                    <div class="image-badge">
+                        <i class="fas fa-code"></i>
+                        <span>Developer</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="hero-image">
-                <img src="images/photo.png" alt="Profile picture" />
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
             </div>
         </section>
 
         <!-- SKILLS -->
         <section class="section" id="skills" data-animate>
-            <h2>Skills</h2>
+            <div class="section-header">
+                <span class="section-tag">// 01</span>
+                <h2>Skills</h2>
+                <p class="section-sub">Technologies I work with</p>
+            </div>
 
             <div class="skills-grid">
-                <div class="skill">
-                    <i class="devicon-java-plain"></i>
+                <div class="skill" style="--i: 0">
+                    <div class="skill-icon">
+                        <i class="devicon-java-plain"></i>
+                    </div>
                     <span>Java</span>
                 </div>
-                <div class="skill">
-                    <i class="devicon-python-plain"></i>
+                <div class="skill" style="--i: 1">
+                    <div class="skill-icon">
+                        <i class="devicon-python-plain"></i>
+                    </div>
                     <span>Python</span>
                 </div>
-                <div class="skill">
-                    <i class="devicon-cplusplus-plain"></i>
+                <div class="skill" style="--i: 2">
+                    <div class="skill-icon">
+                        <i class="devicon-cplusplus-plain"></i>
+                    </div>
                     <span>C++</span>
                 </div>
-                <div class="skill">
-                    <i class="devicon-csharp-plain"></i>
+                <div class="skill" style="--i: 3">
+                    <div class="skill-icon">
+                        <i class="devicon-csharp-plain"></i>
+                    </div>
                     <span>C#</span>
                 </div>
-                <div class="skill">
-                    <i class="devicon-go-original-wordmark"></i>
+                <div class="skill" style="--i: 4">
+                    <div class="skill-icon">
+                        <i class="devicon-go-original-wordmark"></i>
+                    </div>
                     <span>Go</span>
                 </div>
-                <div class="skill">
-                    <i class="devicon-swift-plain"></i>
+                <div class="skill" style="--i: 5">
+                    <div class="skill-icon">
+                        <i class="devicon-swift-plain"></i>
+                    </div>
                     <span>Swift</span>
                 </div>
-                <div class="skill">
-                    <i class="devicon-git-plain"></i>
+                <div class="skill" style="--i: 6">
+                    <div class="skill-icon">
+                        <i class="devicon-git-plain"></i>
+                    </div>
                     <span>Git</span>
                 </div>
-                <div class="skill">
-                    <i class="devicon-html5-plain"></i>
+                <div class="skill" style="--i: 7">
+                    <div class="skill-icon">
+                        <i class="devicon-html5-plain"></i>
+                    </div>
                     <span>HTML</span>
                 </div>
-                <div class="skill">
-                    <i class="devicon-css3-plain"></i>
+                <div class="skill" style="--i: 8">
+                    <div class="skill-icon">
+                        <i class="devicon-css3-plain"></i>
+                    </div>
                     <span>CSS</span>
                 </div>
-                <div class="skill">
-                    <i class="devicon-javascript-plain"></i>
+                <div class="skill" style="--i: 9">
+                    <div class="skill-icon">
+                        <i class="devicon-javascript-plain"></i>
+                    </div>
                     <span>JavaScript</span>
                 </div>
             </div>
         </section>
 
+        <!-- LEARNING -->
         <section class="section" id="learning" data-animate>
-            <h2>Currently Learning</h2>
+            <div class="section-header">
+                <span class="section-tag">// 02</span>
+                <h2>Currently Learning</h2>
+                <p class="section-sub">Expanding my horizons</p>
+            </div>
 
             <div class="learning-grid">
-                <div class="learning-card">
-                    <i class="devicon-react-original"></i>
+                <div class="learning-card" style="--i: 0">
+                    <div class="card-glow"></div>
+                    <div class="learning-icon">
+                        <i class="devicon-react-original"></i>
+                    </div>
                     <h3>React</h3>
                     <p>Building modern, scalable front-end applications.</p>
+                    <div class="card-footer">
+                        <span class="status-dot"></span>
+                        <span>In Progress</span>
+                    </div>
                 </div>
 
-                <div class="learning-card">
-                    <i class="devicon-android-plain"></i>
+                <div class="learning-card" style="--i: 1">
+                    <div class="card-glow"></div>
+                    <div class="learning-icon">
+                        <i class="devicon-android-plain"></i>
+                    </div>
                     <h3>Android</h3>
                     <p>Open-source framework to build scalable apps.</p>
+                    <div class="card-footer">
+                        <span class="status-dot"></span>
+                        <span>In Progress</span>
+                    </div>
                 </div>
 
-                <div class="learning-card">
-                    <i class="devicon-tensorflow-original"></i>
+                <div class="learning-card" style="--i: 2">
+                    <div class="card-glow"></div>
+                    <div class="learning-icon">
+                        <i class="devicon-tensorflow-original"></i>
+                    </div>
                     <h3>Deep Learning</h3>
                     <p>Neural networks and real-world AI applications.</p>
+                    <div class="card-footer">
+                        <span class="status-dot"></span>
+                        <span>In Progress</span>
+                    </div>
                 </div>
 
-                <div class="learning-card">
-                    <i class="devicon-unity-plain"></i>
+                <div class="learning-card" style="--i: 3">
+                    <div class="card-glow"></div>
+                    <div class="learning-icon">
+                        <i class="devicon-unity-plain"></i>
+                    </div>
                     <h3>Unity</h3>
                     <p>Game development and interactive 3D experiences.</p>
+                    <div class="card-footer">
+                        <span class="status-dot"></span>
+                        <span>In Progress</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- PROJECTS -->
         <section class="section" id="projects" data-animate>
-            <h2>Projects</h2>
+            <div class="section-header">
+                <span class="section-tag">// 03</span>
+                <h2>Projects</h2>
+                <p class="section-sub">Things I've built</p>
+            </div>
 
             <div class="projects-grid">
                 <a
                     href="https://github.com/Centsible-AI/Centsible"
                     target="_blank"
                     class="project-card"
+                    style="--i: 0"
                 >
+                    <div class="project-num">01</div>
                     <div class="project-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Centsible</h3>
-                    <p>AI-powered budget optimizer for smarter finance.</p>
+                    <div class="project-body">
+                        <h3>Centsible</h3>
+                        <p>
+                            AI-powered budget optimizer for smarter personal
+                            finance management.
+                        </p>
+                    </div>
+                    <div class="project-tags">
+                        <span>AI</span>
+                        <span>Finance</span>
+                    </div>
+                    <div class="project-arrow">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </div>
                 </a>
 
                 <a
                     href="https://github.com/raghuram-duvvuri/Password-Generator"
                     target="_blank"
                     class="project-card"
+                    style="--i: 1"
                 >
-                    <div class="project-icon">
-                        <i class="fas fa-lock"></i>
+                    <div class="project-num">02</div>
+                    <div class="project-icon"><i class="fas fa-lock"></i></div>
+                    <div class="project-body">
+                        <h3>Password Generator</h3>
+                        <p>
+                            Secure, customizable password generation tool built
+                            in Python.
+                        </p>
                     </div>
-                    <h3>Password Generator</h3>
-                    <p>Secure password generation tool in Python.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Security</span>
+                    </div>
+                    <div class="project-arrow">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </div>
                 </a>
 
                 <a
                     href="https://github.com/raghuram-duvvuri/Snake-Game"
                     target="_blank"
                     class="project-card"
+                    style="--i: 2"
                 >
+                    <div class="project-num">03</div>
                     <div class="project-icon">
                         <i class="fas fa-gamepad"></i>
                     </div>
-                    <h3>Snake Game</h3>
-                    <p>Modern remake of the classic Snake game.</p>
+                    <div class="project-body">
+                        <h3>Snake Game</h3>
+                        <p>
+                            Modern, polished remake of the classic Snake arcade
+                            game.
+                        </p>
+                    </div>
+                    <div class="project-tags">
+                        <span>Game</span>
+                        <span>Python</span>
+                    </div>
+                    <div class="project-arrow">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </div>
                 </a>
             </div>
         </section>
 
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <span class="footer-logo"
+                    ><span class="logo-bracket">[</span>RD<span
+                        class="logo-bracket"
+                        >]</span
+                    ></span
+                >
+                <p>Designed & Built by Raghuram Duvvuri</p>
+            </div>
+        </footer>
+
         <script src="script.js"></script>
-
         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
         <script>
+            // Particles
             particlesJS("particles-js", {
                 particles: {
-                    number: { value: 60 },
-                    color: { value: "#4fc3f7" },
+                    number: { value: 40 },
+                    color: { value: "#00e5ff" },
                     shape: { type: "circle" },
-                    opacity: { value: 0.25 },
-                    size: { value: 3 },
-                    move: {
-                        enable: true,
-                        speed: 1.2,
-                    },
+                    opacity: { value: 0.15, random: true },
+                    size: { value: 2, random: true },
+                    move: { enable: true, speed: 0.8 },
                     line_linked: {
                         enable: true,
-                        opacity: 0.15,
+                        opacity: 0.08,
+                        color: "#00e5ff",
                     },
                 },
             });
+
+            // Staggered hero animation
+            document.addEventListener("DOMContentLoaded", () => {
+                const heroEls = document.querySelectorAll(
+                    ".hero-tag, .hero h1, .hero-sub, .hero-links, .hero-image-wrap",
+                );
+                heroEls.forEach((el, i) => {
+                    el.style.opacity = "0";
+                    el.style.transform = "translateY(24px)";
+                    el.style.transition = `opacity 0.7s ease ${i * 0.12}s, transform 0.7s ease ${i * 0.12}s`;
+                    setTimeout(() => {
+                        el.style.opacity = "1";
+                        el.style.transform = "translateY(0)";
+                    }, 100);
+                });
+            });
         </script>
+        <div
+            id="particles-js"
+            style="
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                pointer-events: none;
+            "
+        ></div>
     </body>
 </html>
