@@ -30,9 +30,8 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <!-- Animated background grid -->
+        <!-- Page background -->
         <div class="bg-grid"></div>
-        <div class="bg-glow"></div>
 
         <nav class="navbar">
             <div class="nav-logo">
@@ -66,16 +65,13 @@
         <section class="hero" id="home">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="hero-tag">
-                        <span class="tag-dot"></span>
-                        Available for opportunities
-                    </div>
+                    <div class="hero-tag">Student Developer</div>
                     <h1>
-                        Hi, I'm<br /><span class="name-accent">Raghuram</span>
+                        Hi, I'm <span class="name-accent">Raghuram</span>.
                     </h1>
                     <p class="hero-sub">
-                        High school student passionate about software
-                        development, mathematics, physics, and engineering.
+                        I build thoughtful software projects at the intersection
+                        of AI, engineering, and practical tools.
                     </p>
                     <div class="hero-links">
                         <a
@@ -97,22 +93,12 @@
                     </div>
                 </div>
 
-                <div class="hero-image-wrap">
-                    <div class="image-ring ring-1"></div>
-                    <div class="image-ring ring-2"></div>
+                <div class="hero-image-panel">
                     <div class="hero-image">
                         <img src="images/photo.png" alt="Raghuram Duvvuri" />
                     </div>
-                    <div class="image-badge">
-                        <i class="fas fa-code"></i>
-                        <span>Developer</span>
-                    </div>
+                    <p>Software development, mathematics, physics, and engineering.</p>
                 </div>
-            </div>
-
-            <div class="hero-scroll">
-                <span>Scroll</span>
-                <div class="scroll-line"></div>
             </div>
         </section>
 
@@ -312,25 +298,25 @@
                 </a>
 
                 <a
-                    href="https://github.com/raghuram-duvvuri/Snake-Game"
+                    href="https://github.com/raghuram-duvvuri/asl-recognition"
                     target="_blank"
                     class="project-card"
                     style="--i: 2"
                 >
                     <div class="project-num">03</div>
                     <div class="project-icon">
-                        <i class="fas fa-gamepad"></i>
+                        <i class="fas fa-hands"></i>
                     </div>
                     <div class="project-body">
-                        <h3>Snake Game</h3>
+                        <h3>ASL Recognition</h3>
                         <p>
-                            Modern, polished remake of the classic Snake arcade
-                            game.
+                            Computer vision project for recognizing American
+                            Sign Language gestures.
                         </p>
                     </div>
                     <div class="project-tags">
-                        <span>Game</span>
-                        <span>Java</span>
+                        <span>AI</span>
+                        <span>Computer Vision</span>
                     </div>
                     <div class="project-arrow">
                         <i class="fas fa-arrow-up-right-from-square"></i>
@@ -353,29 +339,11 @@
         </footer>
 
         <script src="script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script>
-            // Particles
-            particlesJS("particles-js", {
-                particles: {
-                    number: { value: 40 },
-                    color: { value: "#00e5ff" },
-                    shape: { type: "circle" },
-                    opacity: { value: 0.15, random: true },
-                    size: { value: 2, random: true },
-                    move: { enable: true, speed: 0.8 },
-                    line_linked: {
-                        enable: true,
-                        opacity: 0.08,
-                        color: "#00e5ff",
-                    },
-                },
-            });
-
             // Staggered hero animation
             document.addEventListener("DOMContentLoaded", () => {
                 const heroEls = document.querySelectorAll(
-                    ".hero-tag, .hero h1, .hero-sub, .hero-links, .hero-image-wrap",
+                    ".hero-tag, .hero h1, .hero-sub, .hero-links, .hero-image-panel",
                 );
                 heroEls.forEach((el, i) => {
                     el.style.opacity = "0";
@@ -388,17 +356,5 @@
                 });
             });
         </script>
-        <div
-            id="particles-js"
-            style="
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                pointer-events: none;
-            "
-        ></div>
     </body>
 </html>
